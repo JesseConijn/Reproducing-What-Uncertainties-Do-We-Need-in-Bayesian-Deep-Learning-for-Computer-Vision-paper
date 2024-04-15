@@ -1,11 +1,13 @@
 import os
-from tensorflow.keras.callbacks import ModelCheckpoint
-
 import tensorflow as tf
 from tensorflow.keras import layers, Model
 import tensorflow as tf
 from PIL import Image
+from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.python.client import device_lib
+
+from densenet import *
+from camvid import *
 
 def save_model(model, path_to_save):
     return model.save(path_to_save)
@@ -87,3 +89,4 @@ def train():
 if __name__ == '__main__':
     
     train()
+
